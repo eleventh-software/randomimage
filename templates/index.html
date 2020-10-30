@@ -8,28 +8,44 @@
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 
     <title>Random Image</title>
 </head>
 
 <body>
     <div class="container">
-        <img src="{{ data['urls']['regular'] }}" alt="">
-        <br>
-        <span>Description: {{ data['description'] }}</span>
-        <br>
-        <span>Downloads: {{ data['downloads'] }}</span>
-        <br>
-        <span>Likes: {{ data['likes'] }}</span>
-        <br>
-        <span>Username: {{ data['user']['name'] }}</span>
-        <br>
-        <span>Instagram Username: {{ data['user']['instagram_username'] }}</span>
-        <br>
-        <span>Camera Model: {{ data['exif']['model'] }}</span>
-        <br>
-        <button class="btn btn-primary" onclick="window.location.reload()">Tıkla!</button>
+        <section class="jumbotron text-center">
+            <div class="text-center">
+                <img src="{{ data['urls']['regular'] }}" alt="" class="rounded">
+                <br>
+                <br>
+                <span>Description: {{ data['description'] }}</span>
+                <br>
+                <span>Downloads: {{ data['downloads'] }}</span>
+                <br>
+                <span>Likes: {{ data['likes'] }}</span>
+                <br>
+                <span>Username: {{ data['user']['name'] }}</span>
+                <br>
+                <span>Instagram Username: {{ data['user']['instagram_username'] }}</span>
+                <br>
+                <span>Camera Model: {{ data['exif']['model'] }}</span>
+                <br>
+                <br>
+                <button onclick="window.location.reload()" class="fancy-button medium half-left-rounded midnight zoom shake infinite">
+                    Fotoğraf Getir &nbsp;
+                    <span class="icon">
+                        <i class="fa fa-bomb"></i>
+                    </span>
+                </button>
+            </div>
+
+        </section>
     </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
